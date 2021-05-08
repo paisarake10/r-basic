@@ -7,7 +7,7 @@ output:
     css: JB_style.css
     logo: Imgs/LogoCurso.png
 ---
-
+*Juan camilo castaño marin*
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, comment = NA)
 ```
