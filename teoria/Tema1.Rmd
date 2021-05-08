@@ -8,6 +8,7 @@ output:
     logo: Imgs/LogoCurso.png
 ---
 *Juan camilo castaño marin*
+*juan camilo castaño marin*
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, comment = NA)
