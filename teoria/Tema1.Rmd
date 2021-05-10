@@ -4,11 +4,12 @@ author: Juan Gabriel Gomila & María Santos
 output: 
   ioslides_presentation:
     widescreen: true
-    css: JB_style.css
+    css: JB_style.css  
     logo: Imgs/LogoCurso.png
 ---
 *Juan camilo castaño marin*
 *juan camilo castaño marin*
+
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, comment = NA)
