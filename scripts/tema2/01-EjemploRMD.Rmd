@@ -7,6 +7,9 @@ output:
     df_print: paged
 ---
 
+# siempre despues de los chunks o bloques de codigo en un r markdown con codigo en r {r} puede recibir como primer valor
+# el nombre "label"del chunk ig. setup, cars, pressure, saludar etc y otros parametos como echo, include etc ver cheatsheet q ahi aparecen
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
@@ -21,6 +24,8 @@ When you click the **Knit** button a document will be generated that includes bo
 summary(cars)
 ```
 
+
+
 ## Including Plots
 
 You can also embed plots, for example:
@@ -31,7 +36,8 @@ plot(pressure)
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
 
-### Nuestras propias chunks
+Nuestras propias chunks, se puede insertar un chuck en r o en python desde el boton inserr, esquina superior derecha.
+ambien se puede con un shortcut Alt Gr + i
 
 Vamos a calcular $\sqrt{2} - e^{-2}$:
 ```{r miPrimeraChunk, echo = TRUE, eval = TRUE, results='markup'}
@@ -47,6 +53,9 @@ magic(6)
 ```
 
 Cuando queremos hacer la raíz cuadrada de dos, podemos hacerlo:
+
+La 1ra linea es solo para escribir la formula en latex.
+en la segunda linea para que la r sea como la de esta tech la pongo en backsticks y la opero con bloque de texto entre lineas de  r es decir la operacion como tal, el calculo/resultado, en el texto que vaya redactando, y al final la aexpresion con latex y el  resultado de la operacion con r
 
 - En $\LaTeX$: $\sqrt{2}$
 - En `R` haciendo `r sqrt(2)`

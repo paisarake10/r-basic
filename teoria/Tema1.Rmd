@@ -2,10 +2,12 @@
 title: Tema 1 - Trabajando con R
 author: Juan Gabriel Gomila & María Santos
 output: 
+  beamer_presentation: 
+    keep_tex: yes
   ioslides_presentation:
-    widescreen: true
-    css: JB_style.css  
+    css: JB_style.css
     logo: Imgs/LogoCurso.png
+    widescreen: yes
 ---
 *Juan camilo castaño marin*
 *juan camilo castaño marin*
