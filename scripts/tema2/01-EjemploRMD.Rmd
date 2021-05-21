@@ -3,12 +3,11 @@ title: "Ejemplo de R Markdown"
 author: "Curso de Estadística Descriptiva"
 date: "21/12/2018"
 output:
+  pdf_document: 
+    keep_tex: yes
   html_document:
     df_print: paged
 ---
-
-# siempre despues de los chunks o bloques de codigo en un r markdown con codigo en r {r} puede recibir como primer valor
-# el nombre "label"del chunk ig. setup, cars, pressure, saludar etc y otros parametos como echo, include etc ver cheatsheet q ahi aparecen
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -19,6 +18,7 @@ knitr::opts_chunk$set(echo = TRUE)
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
 When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
 
 ```{r cars}
 summary(cars)
@@ -39,6 +39,9 @@ Note that the `echo = FALSE` parameter was added to the code chunk to prevent pr
 Nuestras propias chunks, se puede insertar un chuck en r o en python desde el boton inserr, esquina superior derecha.
 ambien se puede con un shortcut Alt Gr + i
 
+Siempre despues de los chunks o bloques de codigo en un r markdown con codigo en r {r} puede recibir como primer valor
+el nombre "label" del chunk ig. setup, cars, pressure, saludar etc y otros parametos como echo, include etc ver cheatsheet q ahi aparecen
+
 Vamos a calcular $\sqrt{2} - e^{-2}$:
 ```{r miPrimeraChunk, echo = TRUE, eval = TRUE, results='markup'}
 sqrt(2) - exp(-2)
@@ -57,11 +60,15 @@ Cuando queremos hacer la raíz cuadrada de dos, podemos hacerlo:
 La 1ra linea es solo para escribir la formula en latex.
 en la segunda linea para que la r sea como la de esta tech la pongo en backsticks y la opero con bloque de texto entre lineas de  r es decir la operacion como tal, el calculo/resultado, en el texto que vaya redactando, y al final la aexpresion con latex y el  resultado de la operacion con r
 
-- En $\LaTeX$: $\sqrt{2}$
+habia un problema con la linea de abajo para generar un pdf dado que se habia puesto backslash latex sin poner text. tampoco conviene entre los dolares por ejemplo tercera linea abajo dejar un espacio pues se puede liar un poco el compilador y sacar error y un espacio despues de codigo latex para poner codigo de r
+
+- En $\text{LaTeX} : \sqrt{2}$
 - En `R` haciendo `r sqrt(2)`
 - La frase completa: $\sqrt{2}=$ `r sqrt(2)`
 
 El número $\pi$ empieza por `r pi`.
+
+este codigo lo que tiene es que los resultados se esconden dado un vector de notas saco la media la longitud de notas y la desviacion estandard es un chunk escondido en resultados, pero que imprimo los calculos de dicho chunk pues me quedan almacenadas en las variables y puedo acceder a ellas
 
 ```{r prueba, results='hide', echo=FALSE}
 notas = c(3,5,7,7,9,10,4,7,9)

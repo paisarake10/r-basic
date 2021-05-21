@@ -1,0 +1,1 @@
+Sys.setenv(RETICULATE_PYTHON = "C:\\Program Files\\anaconda")

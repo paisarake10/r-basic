@@ -5,6 +5,8 @@ date: "21/12/2018"
 output:
   html_document:
     df_print: paged
+  pdf_document: 
+    keep_tex: yes
 ---
 
 ```{r setup, include=FALSE}
@@ -23,7 +25,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ###### Título 6
 
-Esto es un texto llano. Podemos escribir sin ningún problema todo el texto que queramos para acompañar a tanto el código en `R` como las fórmulas en \LaTeX. 
+Esto es un texto llano. Podemos escribir sin ningún problema todo el texto que queramos para acompañar a tanto el código en `R` como las fórmulas en $\text{LaTeX}$. 
 
 Esto sería una nueva línea de texto. Fijaros que para que separe los párrafos necesitamos siempre almenos un doble intro.
 
@@ -80,3 +82,5 @@ Juan Gabriel  |  3.5      | 30
 Ricardo       |  5.6      | 55
 María         |  7.3      | 20
 Antonio       |  9.5      | 18
+
+se instala paquete kableextra() que es muy bueno tambien para con lenguaje de marcado crear tablas cool cuya documentacion se encuentra [aquí](https://bookdown.org/yihui/rmarkdown-cookbook/kableextra.html)
